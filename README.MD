@@ -1,23 +1,15 @@
 #name:          pyxtf
 =====================
 created:       May 2016
-#by:            p.kennedy@fugro.com
-#description:   python module to read an XTF sonar file
-#notes:         See main at end of script for example how to use this
-#based on XTF version 34 21/2/2012
-#version 2.00
+by:            p.kennedy@fugro.com
+description:   python module to read an XTF sonar file
+notes:         See main at end of script for example how to use this
+based on XTF version 34 21/2/2012
+version 2.00
 =============
 
-# XTF types to python struct types
-# signed char = 1 byte = "b"
-# unsigned char = 1 byte = "B"
-# XTFWORD = signed int 2 bytes = h
-# XTFWORD = UNsigned int 2 bytes = H (for unipolar data)
-# DWORD = unsigned int 4 bytes = "L"
-# short = short integer 2 bytes = "h"
-# char = 1 byte = "c"
-
 #DONE
+* added close methoed, but it really is not required as it will auto close when the class is out of scope.
 * added support for ping weight scale factor.  This is now applied to the sonar beam data on import and it works well to compensate for gain multipliers from edgetech 
 * added support for padbytes
 * now reads by packet rather than record type.  This means it will skip unsupported records 
@@ -36,4 +28,14 @@ created:       May 2016
             pingHdr = r.readPing()
        
     close the File
- 
+    r.close()
+
+Data type Conversions::     
+    XTF types to python struct types
+    signed char = 1 byte = "b"
+    unsigned char = 1 byte = "B"
+    XTFWORD = signed int 2 bytes = h
+    XTFWORD = UNsigned int 2 bytes = H (for unipolar data)
+    DWORD = unsigned int 4 bytes = "L"
+    short = short integer 2 bytes = "h"
+    char = 1 byte = "c"

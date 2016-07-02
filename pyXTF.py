@@ -305,6 +305,9 @@ class XTFReader:
     def __str__(self):
         return pprint.pformat(vars(self))
 
+    def close(self):
+        self.fileptr.close()
+        
     def rewind(self):
         # go back to start of file
         self.fileptr.seek(0, 0)                
@@ -408,4 +411,4 @@ if __name__ == "__main__":
     for n in navigation:
         print ("X: %.3f Y: %.3f Hdg: %.3f Alt: %.3f Depth: %.3f" % (n.sensorX, n.sensorY, n.sensorHeading, n.sensorAltitude, n.sensorDepth))
     print("Complete reading XTF file :-)")
-    
+    r.close()    
