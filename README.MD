@@ -8,7 +8,7 @@ pyxtf
 * version 2.00
 * developed for Python version 3.4 
 
-DONE
+Done
 ====
 * added close method, but it really is not required as it will auto close when the class is out of scope.
 * added support for ping weight scale factor.  This is now applied to the sonar beam data on import and it works well to compensate for gain multipliers from edgetech 
@@ -21,6 +21,12 @@ DONE
 * For each channel in the file header, the XTFFILEHDR then calls the XTFCHANINFO class to read the channel header
 * from there, iterate through all the ping records by calling the XTFPINGHEADER class
 * For each channel, XTFCHANINFO calls the XTFPINGCHANHEADER class to read the ping channel header and data
+
+2Do
+===
+* add support for additional packet types.  We need sample XTF files before bothering to implement so for now skip unsupported packets
+* add support for computing cmg instead of heading data
+* 
 
 Example Reader
 -------

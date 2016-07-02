@@ -6,15 +6,6 @@
 #based on XTF version 34 21/2/2012
 #version 2.00
 
-# XTF types to python struct types
-# signed char = 1 byte = "b"
-# unsigned char = 1 byte = "B"
-# XTFWORD = signed int 2 bytes = h
-# XTFWORD = UNsigned int 2 bytes = H (for unipolar data)
-# DWORD = unsigned int 4 bytes = "L"
-# short = short integer 2 bytes = "h"
-# char = 1 byte = "c"
-
 # See readme.md for details
 
 import pprint
