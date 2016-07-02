@@ -1,5 +1,6 @@
 #name:          pyxtf
-#created:       May 2016
+=====================
+created:       May 2016
 #by:            p.kennedy@fugro.com
 #description:   python module to read an XTF sonar file
 #notes:         See main at end of script for example how to use this
@@ -27,14 +28,12 @@
 * For each channel in the file header, the XTFFILEHDR then calls the XTFCHANINFO class to read the channel header
 * from there, iterate through all the ping records by calling the XTFPINGHEADER class
 * For each channel, XTFCHANINFO calls the XTFPINGCHANHEADER class to read the ping channel header and data
-* In Summary:
-* open the file
-* XTFFILEHDR --> XTFCHANINFO 
-* Loop through all packets
-
-       XTFCHANINFO --> XTFPINGCHANHEADER --> readchannel data
-       XTFCHANINFO --> XTFPINGCHANHEADER --> readchannel data
-       XTFCHANINFO --> XTFPINGCHANHEADER --> readchannel data
-       ignore unsupported records
- close the File
+* In Summary::
+    #opening the file reads the header and then the channelinfo automatically
+    r = XTFReader(<filename>)
+    #we can then loop through all packets, which drills down into the soanr records through the xtfchaninfo, xtfchanheader to the actual sonar data 
+        while r.moreData():
+            pingHdr = r.readPing()
+       
+    close the File
  
