@@ -34,6 +34,7 @@ Example Reader
     r.close()
     # see the test code in main() at the end of pystf for more details.  Have Fun
 ```
+```
 Data Type Conversions from XTF to Python::     
     * XTF types to python struct types
     * signed char = 1 byte = "b"
@@ -43,3 +44,4 @@ Data Type Conversions from XTF to Python::
     * DWORD = unsigned int 4 bytes = "L"
     * short = short integer 2 bytes = "h"
     * char = 1 byte = "c"
+```
