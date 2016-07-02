@@ -21,7 +21,9 @@ DONE
 * For each channel in the file header, the XTFFILEHDR then calls the XTFCHANINFO class to read the channel header
 * from there, iterate through all the ping records by calling the XTFPINGHEADER class
 * For each channel, XTFCHANINFO calls the XTFPINGCHANHEADER class to read the ping channel header and data
-In Summary::
+Example
+-------
+::
     \\ opening the file reads the header and then the channelinfo automatically \\
     r = XTFReader(<filename>)
     \\ we can then loop through all packets, which drills down into the soanr records through the xtfchaninfo, xtfchanheader to the actual sonar data \\ 
