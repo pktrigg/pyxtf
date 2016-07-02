@@ -16,6 +16,7 @@
 # char = 1 byte = "c"
 
 #DONE
+# added support for ping weight scale factor.  This is now applied to the sonar beam data on import and it works well to compensate for gain multipliers from edgetech 
 # added support for padbytes
 # now reads by packet rather than record type.  This means it will skip unsupported records 
 # initial implementation

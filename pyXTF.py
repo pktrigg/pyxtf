@@ -13,8 +13,7 @@
 # short = short integer 2 bytes = "h"
 # char = 1 byte = "c"
 
-#DONE
-#initial implementation
+# See readme.MD for details
 
 import pprint
 import struct
@@ -286,12 +285,15 @@ class XTFReader:
         return XTFPINGCHANHEADER(self.fileptr, self.XTFFileHdr)
          
 if __name__ == "__main__":
+    #open the XTF file for reading by creating a new XTFReader class and passin in the filename to open.  The reader will read the initial header so we can get to grips with the file contents with ease.
     r = XTFReader("C:/development/python/SonarNadirCalculator/01064_m66c448_SSS_20151219_205405_HH_HuginES7_GA4450_P_compressed.xtf")
     print (r)
+    # print the XTF file header information.  This gives a brief summary of the file contents.
     print (r.XTFFileHdr)
+    # iterate through the various channels in the header so we can see what is there.
     for ch in range(r.XTFFileHdr.NumberOfSonarChannels):
         print(r.XTFFileHdr.XTFChanInfo[ch])
-
+    # this is the main loop which iterates through all the data packets in the file.  The primary aim here is to read the sonar data.  Other non-traditional packets are not yet supported, but they can be easily added by anyone. 
     while r.moreData():
         pingHdr = r.readPing()
         print (pingHdr.PingNumber,  pingHdr.SensorXcoordinate, pingHdr.SensorYcoordinate)
