@@ -21,6 +21,8 @@ Done
 * For each channel in the file header, the XTFFILEHDR then calls the XTFCHANINFO class to read the channel header
 * from there, iterate through all the ping records by calling the XTFPINGHEADER class
 * For each channel, XTFCHANINFO calls the XTFPINGCHANHEADER class to read the ping channel header and data
+* this code was written as an exercise in coding for python as much as anything else. I was convinced a scripting language would be too slow for industrial data processing.  
+* I was very wrong.
 
 2Do
 ===
