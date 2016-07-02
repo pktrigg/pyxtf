@@ -10,7 +10,7 @@ pyxtf
 
 DONE
 ====
-* added close methoed, but it really is not required as it will auto close when the class is out of scope.
+* added close method, but it really is not required as it will auto close when the class is out of scope.
 * added support for ping weight scale factor.  This is now applied to the sonar beam data on import and it works well to compensate for gain multipliers from edgetech 
 * added support for padbytes
 * now reads by packet rather than record type.  This means it will skip unsupported records 
@@ -27,12 +27,12 @@ Example Reader
 ```
     # opening the file reads the header and then the channelinfo automatically
     r = XTFReader(<filename>)
-    # we can then loop through all packets, which drills down into the soanr records through the xtfchaninfo, xtfchanheader to the actual sonar data 
+        # we can then loop through all packets, which drills down into the soanr records through the xtfchaninfo, xtfchanheader to the actual sonar data 
         while r.moreData():
             pingHdr = r.readPing()
-       
     # close the File 
     r.close()
+    # see the test code in main() at the end of pystf for more details.  Have Fun
 ```
 Data Type Conversions from XTF to Python::     
     * XTF types to python struct types
