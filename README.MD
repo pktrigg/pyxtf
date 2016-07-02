@@ -1,14 +1,15 @@
-#name:          pyxtf
-=====================
-created:       May 2016
-by:            p.kennedy@fugro.com
-description:   python module to read an XTF sonar file
-notes:         See main at end of script for example how to use this
-based on XTF version 34 21/2/2012
-version 2.00
-=============
+pyxtf
+=====
+*created:       May 2016
+*by:            p.kennedy@fugro.com
+*description:   python module to read an XTF sonar file
+*notes:         See main at end of script for example how to use this
+*based on XTF version 34 21/2/2012
+*version 2.00
+*developed for Python version 3.4 
 
-#DONE
+DONE
+====
 * added close methoed, but it really is not required as it will auto close when the class is out of scope.
 * added support for ping weight scale factor.  This is now applied to the sonar beam data on import and it works well to compensate for gain multipliers from edgetech 
 * added support for padbytes
