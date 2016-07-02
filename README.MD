@@ -22,21 +22,21 @@ DONE
 * from there, iterate through all the ping records by calling the XTFPINGHEADER class
 * For each channel, XTFCHANINFO calls the XTFPINGCHANHEADER class to read the ping channel header and data
 * In Summary::
-    \\ #opening the file reads the header and then the channelinfo automatically
+    \\ #opening the file reads the header and then the channelinfo automatically \\
     r = XTFReader(<filename>)
-    \\ #we can then loop through all packets, which drills down into the soanr records through the xtfchaninfo, xtfchanheader to the actual sonar data 
+    \\ #we can then loop through all packets, which drills down into the soanr records through the xtfchaninfo, xtfchanheader to the actual sonar data \\ 
         while r.moreData():
             pingHdr = r.readPing()
        
-    \\ #close the File
+    \\ #close the File \\
     r.close()
 
 Data type Conversions::     
-    XTF types to python struct types
-    signed char = 1 byte = "b"
-    unsigned char = 1 byte = "B"
-    XTFWORD = signed int 2 bytes = h
-    XTFWORD = UNsigned int 2 bytes = H (for unipolar data)
-    DWORD = unsigned int 4 bytes = "L"
-    short = short integer 2 bytes = "h"
-    char = 1 byte = "c"
+    * XTF types to python struct types
+    * signed char = 1 byte = "b"
+    * unsigned char = 1 byte = "B"
+    * XTFWORD = signed int 2 bytes = h
+    * XTFWORD = UNsigned int 2 bytes = H (for unipolar data)
+    * DWORD = unsigned int 4 bytes = "L"
+    * short = short integer 2 bytes = "h"
+    * char = 1 byte = "c"
