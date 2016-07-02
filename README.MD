@@ -23,7 +23,7 @@ DONE
 * For each channel, XTFCHANINFO calls the XTFPINGCHANHEADER class to read the ping channel header and data
 Example
 -------
-::
+```
     \\ opening the file reads the header and then the channelinfo automatically \\
     r = XTFReader(<filename>)
     \\ we can then loop through all packets, which drills down into the soanr records through the xtfchaninfo, xtfchanheader to the actual sonar data \\ 
@@ -32,7 +32,7 @@ Example
        
     \\ close the File \\
     r.close()
-
+```
 Data type Conversions::     
     * XTF types to python struct types
     * signed char = 1 byte = "b"
