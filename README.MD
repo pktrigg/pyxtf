@@ -5,7 +5,7 @@ pyxtf
 * description:   python module to read an XTF sonar file
 * notes:         See main at end of script for example how to use this
 * based on XTF version 34 21/2/2012
-* version 2.00
+* version 3.00
 * developed for Python version 3.4 
 
 Done
