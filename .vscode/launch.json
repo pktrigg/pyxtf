@@ -13,7 +13,7 @@
                 "WaitOnNormalExit",
                 "RedirectOutput"
             ],
-            "args": ["C:/development/python/ssl-0064-vsm3_17-20151122-175354_P_Rev2.xtf"]
+            "args": ["-i", "I:\\XTF_DS\\0026 - AE1 - primary - 0001.xtf", "-tl"]
         }
    ]
 }
