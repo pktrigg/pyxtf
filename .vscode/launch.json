@@ -7,13 +7,13 @@
             "request": "launch",
             "stopOnEntry": false,
             "program": "${file}",
-            "pythonPath": "c:/python34/python.exe",
+            "pythonPath": "c:/python/python.exe",
             "debugOptions": [
                 "WaitOnAbnormalExit",
                 "WaitOnNormalExit",
                 "RedirectOutput"
             ],
-            "args": ["-i", "I:\\XTF_DS\\0026 - AE1 - primary - 0001.xtf", "-tl"]
+            "args": ["-tl", "-i", "C:/development/python/ssl-0064-vsm3_17-20151122-175354_P_Rev2.xtf"]
         }
    ]
 }
